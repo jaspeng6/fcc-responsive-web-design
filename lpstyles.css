@@ -1,0 +1,225 @@
+body {
+    display: block;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:'Unna', serif;
+}
+
+
+header {
+    position: fixed;
+    padding-top: 20px;
+    min-height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid black;
+    z-index: 1;
+    background-color: antiquewhite;
+}
+
+#nav-bar ul {
+    display: flex;
+    list-style: none; /* Removes default list styles */
+    padding: 0; /* Removes default padding */
+    padding-right:150px;
+    font-size: 20px;
+  }
+  
+  .nav-link {
+    margin: 15px 15px; /* Adds some space between the links */
+    text-decoration: none;
+    color: black;
+    padding:30px;
+  }
+
+#header-img {
+    max-width: 300px;
+    max-height: 150px;
+    align-self: flex-start;
+    margin-top: 10px;
+}
+
+#why-vincere {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    background-image: linear-gradient(
+        white 25%,
+        antiquewhite 75%,
+        white 100%,
+    );
+}
+
+
+#video {
+    width: 100%;
+    height: 90vh;
+    aspect-ratio: 16 / 9;
+    margin-top: 80px;
+}
+
+.desc-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, min-content);
+    gap: 2rem;
+    place-items: center;
+}
+
+.desc {
+    color: gray;
+}
+
+.desc1 {
+    margin-right: 250px; /* Adjust the margin as needed */
+}
+
+.desc-2 {
+    margin-left: 250px;
+}
+#shop-heading {
+    padding-top:50px;
+    text-align: center;
+    padding-bottom: 50px;
+}
+#shop {
+    border-bottom: 1px solid grey;
+    padding-bottom: 5px;
+    background-color: antiquewhite;
+}
+.product-showcase {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.product-1, .product-2, .product-3 {
+    margin: 10px 20px;
+}
+
+.buy-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000000; 
+    color: #ffffff; 
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.buy-button:hover, .buy-button:active {
+    background-color: #333333; 
+}
+
+a {
+    color: white;
+}
+
+a:active {
+    color: white;
+}
+
+#contact {
+    padding: 50px 0; 
+    text-align: center;
+}
+
+
+#center-this {
+    margin-bottom: 30px;
+}
+
+#form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 600px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#submit {
+    width: 100%;
+    padding: 10px;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#submit:hover {
+    background-color: #0056b3;
+}
+
+/* Mobile and Tablet Styles */
+@media (max-width: 1024px) {
+
+    /* Make products stack vertically */
+    .product-showcase {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Adjust product images for responsiveness */
+    .product-img img,
+    .product-img1 img,
+    .product-img2 img {
+        width: 100%; /* Make the image width 100% of its container */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .desc-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-x: hidden; /* Prevent horizontal scroll */
+    }
+
+    /* Adjusting individual descriptions */
+    .desc-heading,
+    .desc1,
+    .desc-2 {
+        text-align: center; /* Center the text */
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: 15px; /* Add some space between the headings and descriptions */
+    }
+
+    /* Adjust product price for better visibility */
+    .price {
+        font-size: 18px; /* Increase the font size for better visibility */
+        font-weight: bold; /* Make the font bold for emphasis */
+        margin-top: 5px; /* Add some space above the price */
+    }
+
+    /* Adjust the form for better responsiveness */
+    #form {
+        max-width: 90%; /* Make the form slightly narrower for better readability */
+        margin: 0 auto; /* Center the form horizontally */
+    }
+
+    /* Adjust the submit button for better visibility */
+    #submit {
+        width: 100%; /* Make the button width 100% */
+        margin-top: 15px; /* Add some space above the button */
+    }
+}
+
+

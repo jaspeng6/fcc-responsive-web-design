@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="title">VincereCo Survey Form</h1>
+    <p id="description">Thank you for taking the time to help us improve our action planners!</p>
+    <form id="survey-form">
+        <fieldset class="basic-info">
+            <label for="name" id="name-label">
+                Name: 
+                <input id="name" type="text" required placeholder="eg. Jason Peng">
+            </label>
+            <label for="email" id="email-label">
+                Email: 
+                <input id="email" type="email" required placeholder="eg. jason@vincere.com">
+            </label>
+            <label for="number" id="number-label">
+                Age (years):
+                <input id="number" type="number" min="0" max="100" placeholder="eg. 21">
+            </label>
+        </fieldset> 
+        <fieldset class="rating">
+            <label for="dropdown">How would you rate our product?
+                <select id="dropdown">
+                    <option>Choose one</option>
+                    <option>Unsatisfactory</option>
+                    <option>Average</option>
+                    <option>Satisfactory</option>
+                </select>
+            </label>
+            <label for="journal-purchase">
+                Would you buy a Vincere Journal?
+                <input type="radio" name="journal-purchase" value="yes" checked class="inline"/>Yes
+                <input type="radio" name="journal-purchase" value="no" class="inline"/>No
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>What colour of our vincere journal do you love the most?</legend>
+            <label for="colour-preference"><input type="radio" name="colour-preference" value="green" class="inline"/>Green</label>
+            <label for="colour-preference"><input type="radio" name="colour-preference" value="forest green" class="inline"/>Forest Green</label>
+            <label for="colour-preference"><input type="radio" name="colour-preference" value="Beige" class="inline"/>Beige</label>
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>What other products would you like?</legend>
+                <label><input type="checkbox" value="notion-templates" class="inline"/>Notion templates</label>
+                <label><input type="checkbox" value="vlogs" class="inline"/>Day in the life vlogs</label>
+                <label><input type="checkbox" value="blogs" class="inline"/>Productivity blogs</label>
+        </fieldset>
+        <fieldset>
+            <label>
+                Any comments or suggestions?
+                <textarea placeholder="Enter your message here!" rows="3" cols="30"></textarea>
+            </label>
+        </fieldset>
+        <input type="submit" value="Submit" id="submit"/>
+
+    </form>
+</body>
+</html>
